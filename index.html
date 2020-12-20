@@ -1,0 +1,1115 @@
+<!---------------------------------------------------------
+  Project No    : Project 2
+  Author        : Ashwini Thorat
+  Start Date    : 09/09/2020
+  End Date      : 12/09/2020
+----------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ashwini Thorat">
+  <title>Granny's Resto</title>
+  <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../fontawesome-free-5.14.0-web/css/all.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .carousel-item {
+      height: 100vh;
+      background-size: content;
+    }
+
+    .carousel-caption {
+      bottom: 270px;
+    }
+
+    .carousel-caption h5 {
+      font-size: 45px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 25px;
+    }
+
+    .carousel-caption p {
+      width: 75%;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .navbar-light .navbar-brand {
+      color: white;
+      font-size: 25px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* Navbar CSS styling */
+    .navbar-light .navbar-nav .active>.nav-link,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .show>.nav-link {
+      color: white;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: white;
+    }
+
+    .navbar-toggler {
+      background: rgb(197, 99, 99);
+    }
+
+    .navbar-nav {
+      text-align: center;
+    }
+
+    .nav-link {
+      padding: .2rem 1rem;
+    }
+
+    .nav-link.active,
+    .nav-link:focus {
+      color: #fff;
+    }
+
+    .navbar-toggler {
+      padding: 1px 5px;
+      font-size: 18px;
+      line-height: 0.3;
+    }
+
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #fff;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      top: 15%;
+      font-family: 'Kaushan Script';
+      font-size: 2.8rem;
+      z-index: 2;
+
+    }
+
+    .carousel-indicators li {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+    }
+
+    .jumbotron .hello {
+      font-family: 'Kaushan Script';
+      font-size: 2vw;
+      z-index: 3;
+    }
+
+    .welcome {
+      font-family: 'Kaushan Script';
+      font-size: 4vw;
+    }
+
+    .jumbotron>p {
+      font-family: 'Raleway', sans-serif;
+      /* font-weight: bold; */
+      color: silver;
+      font-size: 1vw
+    }
+
+    .jumbotron>.hello {
+      color: rgba(204, 102, 29, 0.884);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- start nav /heading -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+
+        <!-- Brand name-->
+        <a class="navbar-brand" href="#"><img src="Granny/logo-light.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size:1.2vw">
+          <ul class="navbar-nav ml-auto font-weight-bold pr-2">
+            <li class="nav-item active pr-2">
+              <a class="nav-link text-uppercase" href="#">Home</a>
+            </li>
+            <li class="nav-item pr-2">
+              <a class="nav-link text-uppercase" href="#">About</a>
+            </li>
+            <li class="nav-item pr-2">
+              <a class="nav-link text-uppercase" href="#">Menu</a>
+            </li>
+            <li class="nav-item pr-2">
+              <a class="nav-link text-uppercase" href="#">Features</a>
+            </li>
+            <li class="nav-item pr-2">
+              <a class="nav-link text-uppercase" href="#">Gallery</a>
+            </li>
+            <li class="nav-item pr-2">
+              <a class="nav-link text-uppercase" href="#">Blog</a>
+            </li>
+            <li class="nav-item pr-2">
+              <a class="nav-link text-uppercase" href="#">Shop</a>
+            </li>
+            <li class="nav-item pr-2">
+              <a class="nav-link text-uppercase" href="#">Elements</a>
+            </li>
+            <li>
+              <button class="bg-transparent text-white" style="border:2px solid white">Reservation</button>
+            </li>
+            <li>
+              <i class="fas fa-search text-white pl-4 mt-2"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- nav ends here  -->
+
+    <!-- Carousel Slider for home page -->
+    <div id="carouselExampleIndicators " class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner sectoneslide">
+        <div class="carousel-item active">
+          <img class="overlay-text" src="Granny/11.jpg" alt="First slide">
+          <div class="carousel-caption grannyoffer d-none d-md-block" ;">
+            <h3 class="pb-0 mt-5 ">Granny Offers You</h3>
+            <p style="font-size:5vw;width:100%">The Best Tasting Experience!</p>
+            <p style="font-size:1vw;font-weight:bold;font-family:helvetica;text-align: center;"
+              class="ml-5 mt-1 smalltxt w-100">
+              Granny is a restaurant, bar and coffee roastery located on Egypt. We have awesome recipes and
+              the most talented chefs in town!</p>
+            <a href="#" class="p-3 text-uppercase text-white mt-3"
+              style="border: 2px solid white; font-size: 1vw;font-style: normal;">Get A Reservation Now</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="" src="Granny/11.jpg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="pb-0 mt-5">Granny Offers You</h3>
+            <p style="font-size:5rem;width:100%">The Best Tasting Experience!</p>
+            <p style="font-size:1vw;font-weight:bold;font-family:helvetica;text-align: center;"
+              class="ml-5 mt-1 smalltxt w-100">
+              Granny is a restaurant, bar and coffee roastery located on Egypt. We have awesome recipes and
+              the most talented chefs in town!</p>
+            <a href="#" class="p-3 text-uppercase text-white mt-3"
+              style="border: 2px solid white; font-size: 1vw;font-style: normal;">Get A Reservation Now</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="" src="Granny/11.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="pb-0 mt-5">Granny Offers You</h3>
+            <p style="font-size:5rem;width:100%">The Best Tasting Experience!</p>
+            <p style="font-size:1vw;font-weight:bold;font-family:helvetica;text-align: center;"
+              class="ml-5 mt-1 smalltxt w-100">
+              Granny is a restaurant, bar and coffee roastery located on Egypt. We have awesome recipes and
+              the most talented chefs in town!
+            </p>
+            <P>
+              <a href="#" class="p-1 text-white m-5 mt-3"
+                style="border: 2px solid white; font-size: 1.0vw; margin: 1vw;">View Menu</a>
+              <a href="#" class="p-1 text-white m-5 mt-3"
+                style="border: 2px solid orange; background-color: orange; font-size: 1.0vw; margin: 1vw;">Reserve
+                Now</a>
+            </P>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!---carousel ends here-->
+
+    <!-- welcome to granny section start -->
+    <div class="container-fluid pt-5 pb-5 pl-2 pr-2 b-block">
+      <p style="font-family: great vibes; font-size: xxx-large;" class="text-warning text-center">Hello Dear</p>
+      <p style="font-family: kaushan script; font-size: xxx-large;" class="text-center">Welcome To Granny</p>
+      <p class="text-center"><i class="fab fa-pagelines b-block text-warning"
+          style="font-size: xx-large ; width: 50px; transform: rotate(50deg);"></i></p>
+      <p class="text-center pb-5">Granny was the first retaurant to open in Egypt, the resturant was designed with the
+        history in mind<br> we have created a soft industrial dining room, combined with an open kitchen, coffee take
+        out bar<br> and on site coffee roastery.</p>
+
+      <div class="container-fluid w-100 accordion" id="accordionExample">
+        <div class="row  justify-content-center">
+
+          <div class=" col-xl-2 col-lg-2 col-md-3 col-12 align-self-center "
+            style="font-family: Kaushan Script; font-size: larger;">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-dark text-center" type="button" data-toggle="collapse"
+                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">About
+              </button>
+            </h2>
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-3 col-12 align-self-center text-dark"
+            style="font-family: Kaushan Script;">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-dark text-center" type="button" data-toggle="collapse"
+                data-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+                History
+              </button>
+            </h2>
+          </div>
+          <div id="tabs" class="col-xl-2 col-lg-2 col-md-3 col-12 align-self-center text-dark"
+            style="font-family: Kaushan Script;">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-dark text-center" type="button" data-toggle="collapse"
+                data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+                Awards
+              </button>
+            </h2>
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-3 col-12 align-self-center text-dark"
+            style="font-family: Kaushan Script;">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-dark text-center" type="button" data-toggle="collapse"
+                data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+                Chefs
+              </button>
+            </h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div>
+            <div id="collapseOne" class="collapse show container-fluid" aria-labelledby="headingOne"
+              data-parent="#accordionExample">
+              <div class="card-body row justify-content-center">
+                <div class="col-xl-3 col-lg-3 col-md-5 col-12 m-1 p-3  ">
+                  <img src="./Granny/1 (1).jpg" alt="" class="w-100">
+                  <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">Start eating
+                    better</p>
+                  <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Daily New Fresh Menus
+                  </p>
+
+                  <p class="text-center pb-5">Granny help you treat yourself with a different meal everyday, thanks to
+                    our daily changing menus and our awesome creative chefs!</p>
+
+                </div>
+                <div class="col-xl-3.8 col-lg-3 col-md-5 col-12 m-1 p-3 ">
+                  <img src="./Granny/2.jpg" alt="" class="w-100">
+                  <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">Quality is
+                    the
+                    heart</p>
+                  <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Fresh Ingredient,
+                    Tasty Meals</p>
+                  <p class="text-center pb-5">Who said healthy food can’t also be delicious? Granny creative chefs use
+                    fresh and seasonal ingredients to make affordable.
+                </div>
+                <div class="col-xl-3.6 col-lg-3 col-md-5 col-12 m-1 p-3">
+                  <img src="./Granny/4.jpg" alt="" class="w-100">
+                  <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">Hot & ready
+                    to serve</p>
+                  <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Creative & Talented
+                    Chefs</p>
+                  <p class="text-center pb-5">Granny help you treat yourself with a different meal everyday, thanks to
+                    our daily changing menus and our awesome creative chefs!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div id="collapsetwo" class="collapse hidden container-fluid" aria-labelledby="headingtwo"
+              data-parent="#accordionExample">
+              <div class="row justify-content-center">
+                <div class="col-8 text-center m-4">
+                  <img src="./Granny/15.png" alt="" width="60%">
+                  <h3 class="text-center" style="font-family: great vibes;;">I don't like food that's too carefully
+                    arranged; it makes me think that the chef is spending too much time arranging and not enough time
+                    cooking.</h3>
+                </div>
+              </div>
+              <div class="card-body row justify-content-center">
+                <div class="col-xl-3 col-lg-3 col-md-5 col-12 m-1 p-3  ">
+                  <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">1995</p>
+                  <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Grand Opening</p>
+
+                  <p class="text-center pb-5">Granny help you treat yourself with a different meal everyday, thanks to
+                    our daily changing menus and our awesome creative chefs!</p>
+                </div>
+                <div class="col-xl-3.8 col-lg-3 col-md-5 col-12 m-1 p-3 ">
+                  <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">2005</p>
+                  <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Seond Branch</p>
+                  <p class="text-center pb-5">Who said healthy food can’t also be delicious? Granny creative chefs use
+                    fresh and seasonal ingredients to make affordable.
+                  </p>
+                </div>
+                <div class="col-xl-3.6 col-lg-3 col-md-5 col-12 m-1 p-3">
+                  <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">2017</p>
+                  <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Great Taste Award</p>
+                  <p class="text-center pb-5">Granny help you treat yourself with a different meal everyday, thanks to
+                    our daily changing menus and our awesome creative chefs!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div id="collapsethree" class="collapse hidden" aria-labelledby="headingOne"
+              data-parent="#accordionExample">
+              <div class="card-body p-4 text-center">
+                <img src="./Granny/1.png" alt="" width="auto" class="m-1">
+                <img src="./Granny/2.png" alt="" width="auto" class="m-1">
+                <img src="./Granny/3.png" alt="" width="auto" class="m-1">
+                <img src="./Granny/4.png" alt="" width="auto" class="m-1">
+                <img src="./Granny/5.png" alt="" width="auto" class="m-1">
+                <img src="./Granny/6.png" alt="" width="auto" class="m-1">
+                <img src="./Granny/7.png" alt="" width="auto" class="m-1">
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-8 text-center m-4">
+                  <h3 class="text-center" style="font-family: great vibes;">Since our grand opening in May 1995, Granny
+                    has won great awards from food critics and organizations all over the world.</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div id="collapsefour" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body container-fluid row  m-5 w-100">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 p-3">
+                  <div class="card" style="width: 100%;">
+                    <img src="./Granny/5.jpg" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title text-center text-warning" style="font-family: kaushan script;">Mahmoud
+                        Baghagho</h5>
+                      <p class="card-text text-center">CEO & Founder</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 p-3">
+                  <div class="card" style="width: 100%;">
+                    <img src="./Granny/6.jpg" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title text-center text-warning" style="font-family: kaushan script;">Ahmed Hassan
+                      </h5>
+                      <p class="card-text text-center">master chef</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 p-3">
+                  <div class="card" style="width: 100%;">
+                    <img src="./Granny/8.jpg" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title text-center text-warning" style="font-family: kaushan script;">Amr Gamal
+                        Sadeq</h5>
+                      <p class="card-text text-center">master chef</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 p-3">
+                  <div class="card" style="width: 100%;">
+                    <img src="./Granny/7.jpg" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title text-center text-warning" style="font-family: kaushan script;">Ahmed Abd
+                        Alhaleem</h5>
+                      <p class="card-text text-center">master chef</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- welcome to granny section ends -->
+
+  <!-- start daily special section -->
+  <div class="container-fluid">
+    <p style="background-color: white; content: ''; justify-content: center; position: relative; left: 50%; width: 7vw; height: 4vw; margin-bottom: -2vw;"
+      class="rounded-circle"></p>
+    <div class="container-fluid  text-center pb-5"
+      style="background-image: url('./Granny/9.jpg') ; background-size: cover; background-repeat: no-repeat; ">
+      <p style="font-family: great vibes; font-size: xxx-large;" class=" p-5 text-warning text-center">What’s for lunch?
+      </p>
+      <p style="font-family: kaushan script; font-size: xxx-large;" class="text-center text-white">Check Our Daily
+        Specials</p>
+      <div class="container-fluid mt-3 mb-3 ml-5 mr-5 bg-white p-5"
+        style="width: 70%; justify-content: center; position: relative; left: 50%; top: 50%; transform: translate(-50%);">
+        <div>
+          <p style="font-family: great vibes; font-size: x-large;" class="text-warning text-center">Lek 19.95</p>
+          <p style="font-family: kaushan script; font-size: x-large;" class="text-center ">Grilled chicken fillets</p>
+          <p>Grilled chicken fillets on slate plate, this is the most famous plate in our restaurant and the famous hot
+            tomato salsa.</p>
+          <p><i class="fas fa-bahai" style="font-size: larger;"></i></p>
+        </div>
+        <div>
+          <p style="font-family: great vibes; font-size: x-large;" class="text-warning text-center">Lek 19.95</p>
+          <p style="font-family: kaushan script; font-size: x-large;" class="text-center ">Grilled chicken fillets</p>
+          <p>Grilled chicken fillets on slate plate, this is the most famous plate in our restaurant and the famous hot
+            tomato salsa.</p>
+          <p><i class="fas fa-bahai" style="font-size: larger;"></i></p>
+        </div>
+        <div>
+          <p style="font-family: great vibes; font-size: x-large;" class="text-warning text-center">Lek 19.95</p>
+          <p style="font-family: kaushan script; font-size: x-large;" class="text-center ">Grilled chicken fillets</p>
+          <p>Grilled chicken fillets on slate plate, this is the most famous plate in our restaurant and the famous hot
+            tomato salsa.</p>
+          <p><i class="fas fa-bahai" style="font-size: larger;"></i></p>
+        </div>
+      </div>
+
+
+    </div>
+    <p style="background-color: white; content: ''; justify-content: center; position: relative;  left: 50%; width: 7vw; height: 4vw; margin-top: -2vw;"
+      class="rounded-circle"></p>
+
+
+  </div>
+  <!-- end daily special section -->
+
+  <!-- teste the best start -->
+
+  <div class="container-fluid pt-5 pb-5 pl-2 pr-2 b-block">
+    <p style="font-family: great vibes; font-size: xxx-large;" class="text-warning text-center">Taste the best</p>
+    <p style="font-family: kaushan script; font-size: xxx-large;" class="text-center">Fresh Ingredient, Tasty Meals</p>
+    <p class="text-center"><i class="fab fa-pagelines b-block text-warning"
+        style="font-size: xx-large ; width: 50px; transform: rotate(50deg);"></i></p>
+    <p class="text-center pb-5">Granny was the first retaurant to open in Egypt, the resturant was designed with the
+      history in mind<br> we have created a soft industrial dining room, combined with an open kitchen, coffee take out
+      bar<br> and on site coffee roastery.</p>
+
+    <div class="container-fluid w-100 accordion " id="accordionExample">
+      <div class="row  justify-content-center">
+
+        <div class=" col-xl-2 col-lg-2 col-md-3 col-12 align-self-center "
+          style="font-family: Kaushan Script; font-size: larger;">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-dark text-center" type="button" data-toggle="collapse"
+              data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Lunch
+            </button>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-3 col-12 align-self-center text-dark" style="font-family: Kaushan Script;">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-dark text-center" type="button" data-toggle="collapse"
+              data-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+              Dinner
+            </button>
+        </div>
+        <div id="tabs" class="col-xl-2 col-lg-2 col-md-3 col-12 align-self-center text-dark"
+          style="font-family: Kaushan Script;">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-dark text-center" type="button" data-toggle="collapse"
+              data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+              Desert
+            </button>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-3 col-12 align-self-center text-dark" style="font-family: Kaushan Script;">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-dark text-center" type="button" data-toggle="collapse"
+              data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+              Drinks
+            </button>
+        </div>
+      </div>
+      <div class="row justify-content-center pt-5">
+        <div>
+          <div id="collapseOne" class="collapse show container-fluid" aria-labelledby="headingOne"
+            data-parent="#accordionExample">
+            <div class="card-body row justify-content-center">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12   p-3 pb-0">
+                <!-- <img src="./Granny/1 (1).jpg" alt="" class="w-100"> -->
+                <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">Lek 26.95</p>
+                <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Grilled Fillet</p>
+                <p class="text-center"><i class="fas fa-bahai" style="font-size: larger;"></i></p>
+                <p class="text-center pb-5">Red peppers, roasted garlic, lemon slices, olives & mint chesapeake crab dip
+                  with artichoke, baked and topped with cheddar cheese, with crusty bread for dipping. creamy chesapeake
+                  crab dip with artichoke, baked and topped with cheddar cheese.</p>
+
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12 p-0 ">
+                <img src="./Granny/11.jpg" alt="" class="w-100 h-100">
+                <p style="background-color: white; content: '';  position: relative; left: 40%; width: 5vw; height: 4vw; margin-top: -2vw;"
+                  class="rounded-circle"></p>
+
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12 p-3">
+                <!-- <img src="./Granny/4.jpg" alt="" class="w-100"> -->
+                <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">Lek 33.95</p>
+                <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Chicken Breast</p>
+                <p class="text-center"><i class="fas fa-bahai" style="font-size: larger;"></i></p>
+                <p class="text-center pb-5">Paupiette of chicken, blue cheese, rosemary & beans creamy chesapeake crab
+                  dip with artichoke, baked and topped with cheddar cheese, with crusty bread for dipping. creamy
+                  chesapeake crab dip with artichoke, baked and topped with cheddar cheese.</p>
+
+              </div>
+              <!-- start second row -->
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12 p-0 ">
+                <img src="./Granny/19.jpg" alt="" class="w-100 h-100">
+                <p style="background-color: white; content: '';  position: relative; left: 40%; width: 5vw; height: 4vw; margin-top: -2vw;"
+                  class="rounded-circle"></p>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12 p-3">
+                <!-- <img src="./Granny/4.jpg" alt="" class="w-100"> -->
+                <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">Lek 33.95</p>
+                <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Chicken Breast</p>
+                <p class="text-center"><i class="fas fa-bahai" style="font-size: larger;"></i></p>
+                <p class="text-center pb-5">Paupiette of chicken, blue cheese, rosemary & beans creamy chesapeake crab
+                  dip with artichoke, baked and topped with cheddar cheese, with crusty bread for dipping. creamy
+                  chesapeake crab dip with artichoke, baked and topped with cheddar cheese.</p>
+
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12  p-0">
+                <img src="./Granny/11.jpg" alt="" class="w-100 h-100">
+                <p style="background-color: white; content: '';  position: relative; left: 40%; width: 5vw; height: 4vw; margin-top: -2vw;"
+                  class="rounded-circle"></p>
+
+              </div>
+              <!-- end second row -->
+              <!-- start third row -->
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12   p-3 pb-0">
+                <!-- <img src="./Granny/1 (1).jpg" alt="" class="w-100"> -->
+                <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">Lek 26.95</p>
+                <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Grilled Fillet</p>
+                <p class="text-center"><i class="fas fa-bahai" style="font-size: larger;"></i></p>
+                <p class="text-center pb-5">Red peppers, roasted garlic, lemon slices, olives & mint chesapeake crab dip
+                  with artichoke, baked and topped with cheddar cheese, with crusty bread for dipping. creamy chesapeake
+                  crab dip with artichoke, baked and topped with cheddar cheese.</p>
+
+
+              </div>
+
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12  p-0 " style="margin-top: -2vw; margin-bottom: 2vw;">
+                <p style="background-color: white; content: '';  position: relative; left: 45%; width: 5vw; height: 4vw; margin-bottom: -2vw;"
+                  class="rounded-circle"></p>
+                <img src="./Granny/17.jpg" alt="" class="w-100 h-100">
+                <p style="background-color: white; content: '';  position: relative; left: 40%; width: 5vw; height: 4vw; margin-top: -2vw;"
+                  class="rounded-circle"></p>
+
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12 p-3">
+                <!-- <img src="./Granny/4.jpg" alt="" class="w-100"> -->
+                <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">Lek 33.95</p>
+                <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Chicken Breast</p>
+                <p class="text-center"><i class="fas fa-bahai" style="font-size: larger;"></i></p>
+                <p class="text-center pb-5">Paupiette of chicken, blue cheese, rosemary & beans creamy chesapeake crab
+                  dip with artichoke, baked and topped with cheddar cheese, with crusty bread for dipping. creamy
+                  chesapeake crab dip with artichoke, baked and topped with cheddar cheese.</p>
+
+              </div>
+              <!-- end third row -->
+              <!-- start fourth row -->
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12  p-0">
+                <p style="background-color: white; content: '';  position: relative; left: 45%; width: 5vw; height: 4vw; margin-bottom: -2vw;"
+                  class="rounded-circle"></p>
+                <img src="./Granny/15.jpg" alt="" class="w-100 h-100">
+
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12 p-3">
+                <!-- <img src="./Granny/4.jpg" alt="" class="w-100"> -->
+                <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">Lek 33.95</p>
+                <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Chicken Breast</p>
+                <p class="text-center"><i class="fas fa-bahai" style="font-size: larger;"></i></p>
+                <p class="text-center pb-5">Paupiette of chicken, blue cheese, rosemary & beans creamy chesapeake crab
+                  dip with artichoke, baked and topped with cheddar cheese, with crusty bread for dipping. creamy
+                  chesapeake crab dip with artichoke, baked and topped with cheddar cheese.</p>
+
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-12 p-0 ">
+                <p style="background-color: white; content: '';  position: relative; left: 45%; width: 5vw; height: 4vw; margin-bottom: -2vw;"
+                  class="rounded-circle"></p>
+                <img src="./Granny/12.jpg" alt="" class="w-100 h-100">
+
+              </div>
+              <!-- end fourth row -->
+              <a href="#" class="bg-dark text-white pt-3 pb-3 pl-5 pr-5 " style=" margin-top: 10%;">DISCOVER FULL
+                MENU</a>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <div id="collapsetwo" class="collapse hidden container-fluid" aria-labelledby="headingtwo"
+            data-parent="#accordionExample">
+            <div class="row justify-content-center">
+              <div class="col-8 text-center m-4">
+                <img src="./Granny/15.png" alt="" width="60%">
+                <h3 class="text-center" style="font-family: great vibes;;">I don't like food that's too carefully
+                  arranged; it makes me think that the chef is spending too much time arranging and not enough time
+                  cooking.</h3>
+
+              </div>
+            </div>
+            <div class="card-body row justify-content-center">
+              <div class="col-xl-3 col-lg-3 col-md-5 col-12 m-1 p-3  ">
+                <!-- <img src="./Granny/1 (1).jpg" alt="" class="w-100"> -->
+                <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">1995</p>
+                <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Grand Opening</p>
+                <p><i class="fas fa-bahai" style="font-size: larger;"></i></p>
+                <p class="text-center pb-5">Granny help you treat yourself with a different meal everyday, thanks to our
+                  daily changing menus and our awesome creative chefs!</p>
+
+              </div>
+              <div class="col-xl-3.8 col-lg-3 col-md-5 col-12 m-1 p-3 ">
+                <!-- <img src=".Granny/2.jpg" alt="" class="w-100"> -->
+                <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">2005</p>
+                <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Seond Branch</p>
+
+                <p class="text-center pb-5">Who said healthy food can’t also be delicious? Granny creative chefs use
+                  fresh and seasonal ingredients to make affordable.
+
+              </div>
+              <div class="col-xl-3.6 col-lg-3 col-md-5 col-12 m-1 p-3">
+                <!-- <img src="./Granny/4.jpg" alt="" class="w-100"> -->
+                <p style="font-family: great vibes; font-size:x-large;" class="text-warning text-center">2017</p>
+                <p style="font-family: kaushan script; font-size: x-large;" class="text-center">Great Taste Award</p>
+                <p class="text-center pb-5">Granny help you treat yourself with a different meal everyday, thanks to our
+                  daily changing menus and our awesome creative chefs!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div id="collapsethree" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body p-4 text-center">
+              <img src="./Granny/1.png" alt="" width="auto" class="m-1">
+              <img src="./Granny/2.png" alt="" width="auto" class="m-1">
+              <img src="./Granny/3.png" alt="" width="auto" class="m-1">
+              <img src="./Granny/4.png" alt="" width="auto" class="m-1">
+              <img src="./Granny/5.png" alt="" width="auto" class="m-1">
+              <img src="./Granny/6.png" alt="" width="auto" class="m-1">
+              <img src="./Granny/7.png" alt="" width="auto" class="m-1">
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-8 text-center m-4">
+                <!-- <img src="./Granny/15.png" alt="" width="60%"> -->
+                <h3 class="text-center" style="font-family: great vibes;">Since our grand opening in May 1995, Granny
+                  has won great awards from food critics and organizations all over the world.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div id="collapsefour" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body container-fluid row  m-5 w-100">
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 p-3">
+                <div class="card" style="width: 100%;">
+                  <img src="./Granny/5.jpg" class="card-img-top w-100" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center" style="font-family: kaushan script;">Mahmoud Baghagho</h5>
+                    <p class="card-text text-center">CEO & Founder</p>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 p-3">
+                <div class="card" style="width: 100%;">
+                  <img src="./Granny/6.jpg" class="card-img-top w-100" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center" style="font-family: kaushan script;">Ahmed Hassan</h5>
+                    <p class="card-text text-center">master chef</p>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 p-3">
+                <div class="card" style="width: 100%;">
+                  <img src="./Granny/8.jpg" class="card-img-top w-100" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center" style="font-family: kaushan script;">Amr Gamal Sadeq</h5>
+                    <p class="card-text text-center">master chef</p>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 p-3">
+                <div class="card" style="width: 100%;">
+                  <img src="./Granny/7.jpg" class="card-img-top w-100" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center" style="font-family: kaushan script;">Ahmed Abd Alhaleem</h5>
+                    <p class="card-text text-center">master chef</p>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div> <!-- teste the best ends -->
+
+  <!-- starts people talks -->
+  <div class="container-fluid">
+    <p style="background-color: white; content: ''; justify-content: center; position: relative; left: 50%; width: 7vw; height: 4vw; margin-bottom: -2vw;"
+      class="rounded-circle"></p>
+    <div class="container-fluid  text-center pb-5 pr-4"
+      style="background-image: url('./Granny/9.jpg') ; background-size: cover; background-repeat: no-repeat; ">
+      <p style="font-family: great vibes; font-size: xxx-large;" class="text-center pt-5 pl-5 text-warning ">People talk
+      </p>
+      <p style="font-family: kaushan script; font-size: xxx-large;" class="text-center text-white">Our Guestbook</p>
+      <div class="container mt-3 mb-3 ml-5 mr-5 p-5"
+        style=" width: 90%; justify-content: center; position: relative; left: 50%; top: 50%; transform: translate(-50%);">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+          </ol>
+          <div class="carousel-inner container-fluid ">
+            <div class="carousel-item active row">
+              <div class="card m-1 " style="width: 32%; display: inline-table;">
+                <div class="card-body">
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <h5 class="card-title" style="font-family: Kaushan Script;"> Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Ut nemo eligendi animi, maiores autem dignissimos dolorem facilis rem. Ut iure
+                    delectus tempora veniam deserunt corporis ab facere quod sequi impedit!</h5>
+                  <p class="card-text">
+                  <div class="border rounded-circle mx-auto" style="width: 25%;">
+                    <img src="./Granny/8.jpg" width="100%" class="rounded-circle">
+                  </div>
+                  <span class="text-dark mt-3">-John</span>
+                  </p>
+                </div>
+              </div>
+              <div class="card m-1  " style="width: 32%; display: inline-table;">
+                <div class="card-body">
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <h5 class="card-title" style="font-family: Kaushan Script;"> Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Ut nemo eligendi animi, maiores autem dignissimos dolorem facilis rem. Ut iure
+                    delectus tempora veniam deserunt corporis ab facere quod sequi impedit!</h5>
+                  <p class="card-text">
+                  <div class="border rounded-circle mx-auto" style="width: 25%;">
+                    <img src="./Granny/6.jpg" width="100%" class="rounded-circle">
+                  </div>
+                  <span class="text-dark mt-3">-Mike</span>
+                  </p>
+                </div>
+              </div>
+              <div class="card m-1" style="width: 32%; display: inline-table;">
+                <div class="card-body">
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <h5 class="card-title" style="font-family: Kaushan Script;"> Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Ut nemo eligendi animi, maiores autem dignissimos dolorem facilis rem. Ut iure
+                    delectus tempora veniam deserunt corporis ab facere quod sequi impedit!</h5>
+                  <p class="card-text">
+                  <div class="border rounded-circle mx-auto" style="width: 25%;">
+                    <img src="./Granny/7.jpg" width="100%" class="rounded-circle">
+                  </div>
+                  <span class="text-dark mt-3">-Tyson</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card m-1" style="width: 32%; display: inline-table;">
+                <div class="card-body">
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <h5 class="card-title" style="font-family: Kaushan Script;"> Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Ut nemo eligendi animi, maiores autem dignissimos dolorem facilis rem. Ut iure
+                    delectus tempora veniam deserunt corporis ab facere quod sequi impedit!</h5>
+                  <p class="card-text">
+                  <div class="border rounded-circle mx-auto" style="width: 25%;">
+                    <img src="./Granny/8.jpg" width="100%" class="rounded-circle">
+                  </div>
+                  <span class="text-dark mt-3">-John</span>
+                  </p>
+                </div>
+              </div>
+              <div class="card m-1" style="width: 32%; display: inline-table">
+                <div class="card-body">
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <h5 class="card-title" style="font-family: Kaushan Script;"> Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Ut nemo eligendi animi, maiores autem dignissimos dolorem facilis rem. Ut iure
+                    delectus tempora veniam deserunt corporis ab facere quod sequi impedit!</h5>
+                  <p class="card-text">
+                  <div class="border rounded-circle mx-auto" style="width: 25%;">
+                    <img src="./Granny/6.jpg" width="100%" class="rounded-circle">
+                  </div>
+                  <span class="text-dark mt-3">-Mike</span>
+                  </p>
+                </div>
+              </div>
+              <div class="card m-1 bg-white" style="width: 32%; display: inline-table;">
+                <div class="card-body">
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <h5 class="card-title" style="font-family: Kaushan Script;"> Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Ut nemo eligendi animi, maiores autem dignissimos dolorem facilis rem. Ut iure
+                    delectus tempora veniam deserunt corporis ab facere quod sequi impedit!</h5>
+                  <p class="card-text">
+                  <div class="border rounded-circle mx-auto" style="width: 25%;">
+                    <img src="./Granny/7.jpg" width="100%" class="rounded-circle">
+                  </div>
+                  <span class="text-dark mt-3">-Tyson</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <p style="background-color: white; content: ''; justify-content: center; position: relative;  left: 50%; width: 7vw; height: 4vw; margin-bottom: -6vw;"
+        class="rounded-circle"></p>
+
+
+    </div> <!-- Ends people talks -->
+  </div>
+
+  <!-- starts Dont miss -->
+
+  <div class="container-fluid">
+    <!-- <p style="background-color: white; content: ''; justify-content: center; position: relative; left: 50%; width: 7vw; height: 4vw; margin-bottom: -2vw;" class="rounded-circle"></p> -->
+    <div class="container-fluid  text-center pb-5 pr-4">
+
+      <p style="font-family: great vibes; font-size: xxx-large;" class=" p-5 text-warning text-center">Don’t miss</p>
+      <p style="font-family: kaushan script; font-size: xxx-large;" class="text-center text-dark">Our News & Events</p>
+      <p class="text-center"><i class="fab fa-pagelines b-block text-warning"
+          style="font-size: xx-large ; width: 50px; transform: rotate(50deg);"></i></p>
+      <!-- <div class="container mt-3 mb-3 ml-5 mr-5 p-5" style=" width: 90%; justify-content: center; position: relative; left: 50%; top: 50%; transform: translate(-50%);"> -->
+
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+        </ol>
+        <div class="carousel-inner container-fluid ">
+          <div class="carousel-item active row">
+            <div class="card text-left" style="width: 24%; display: inline-table;">
+              <img src="./Granny/25.jpg" class="card-img-top" alt="..." width="100%">
+              <div class="card-body ">
+                <p class="card-text text-warning"> Fall, Side Dish </p>
+                <h5 class="card-title"> Simple recipes for spring</h5>
+                <p class="card-text"> numquam id perferendis delectus vero, perspiciatis odio modi saepe minus
+                  dignissimos nesciunt officiis. Delectus, itaque.</p>
+                <hr>
+                <p class="card-text">May 26,2017</p>
+              </div>
+            </div>
+            <div class="card m-1  text-left" style="width: 24%; display: inline-table;">
+              <img src="./Granny/26.jpg" class="card-img-top" alt="..." width="100%">
+              <div class="card-body ">
+                <p class="card-text text-warning"> Apple, Stuffing and Dressing </p>
+                <h5 class="card-title"> Cake with Cream for Snacks</h5>
+                <p class="card-text"> numquam id perferendis delectus vero, perspiciatis odio modi saepe minus
+                  dignissimos nesciunt officiis. Delectus, itaque.</p>
+                <hr>
+                <p class="card-text">May 26,2017</p>
+              </div>
+            </div>
+            <div class="card m-1 text-left" style="width: 24%; display: inline-table;">
+              <img src="./Granny/27.jpg" class="card-img-top" alt="..." width="100%">
+              <div class="card-body ">
+                <p class="card-text text-warning"> Food, Cheese </p>
+                <h5 class="card-title"> Dinner Party for a Chef!</h5>
+                <p class="card-text"> numquam id perferendis delectus vero, perspiciatis odio modi saepe minus
+                  dignissimos nesciunt officiis. Delectus, itaque.</p>
+                <hr>
+                <p class="card-text">May 26,2017</p>
+              </div>
+            </div>
+            <div class="card m-1 text-left" style="width: 24%; display: inline-table;">
+              <img src="./Granny/28.jpg" class="card-img-top" alt="..." width="100%">
+              <div class="card-body ">
+                <p class="card-text text-warning"> Green, Casserole </p>
+                <h5 class="card-title"> The Best Side Dishes for Dinner</h5>
+                <p class="card-text"> numquam id perferendis delectus vero, perspiciatis odio modi saepe minus
+                  dignissimos nesciunt officiis. Delectus, itaque.</p>
+                <hr>
+                <p class="card-text">May 26,2017</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card m-1 text-left" style="width: 24%; display: inline-table;">
+              <img src="./Granny/29.jpg" class="card-img-top" alt="..." width="100%">
+              <div class="card-body ">
+                <p class="card-text text-warning"> Fall, Side Dish </p>
+                <h5 class="card-title"> Simple recipes for spring.</h5>
+                <p class="card-text"> numquam id perferendis delectus vero, perspiciatis odio modi saepe minus
+                  dignissimos nesciunt officiis. Delectus, itaque.</p>
+                <hr>
+                <p class="card-text">May 26,2017</p>
+              </div>
+            </div>
+            <div class="card m-1 text-left" style="width: 24%; display: inline-table">
+              <img src="./Granny/30.jpg" class="card-img-top" alt="..." width="100%">
+              <div class="card-body ">
+                <p class="card-text text-warning"> Apple, Stuffing and Dressing </p>
+                <h5 class="card-title"> Cake with Cream for Snacks</h5>
+                <p class="card-text"> numquam id perferendis delectus vero, perspiciatis odio modi saepe minus
+                  dignissimos nesciunt officiis. Delectus, itaque.</p>
+                <hr>
+                <p class="card-text">May 26,2017</p>
+              </div>
+            </div>
+            <div class="card m-1 bg-white text-left" style="width: 24%; display: inline-table;">
+              <img src="./Granny/31.jpg" class="card-img-top" alt="..." width="100%">
+              <div class="card-body ">
+                <p class="card-text text-warning"> Food, Cheese </p>
+                <h5 class="card-title"> Dinner Party for a Chef!</h5>
+                <p class="card-text"> numquam id perferendis delectus vero, perspiciatis odio modi saepe minus
+                  dignissimos nesciunt officiis. Delectus, itaque.</p>
+                <hr>
+                <p class="card-text">May 26,2017</p>
+              </div>
+            </div>
+            <div class="card m-1 text-left" style="width: 24%; display: inline-table;">
+              <img src="./Granny/32.jpg" class="card-img-top" alt="..." width="100%">
+              <div class="card-body ">
+                <p class="card-text text-warning"> Green, Casserole </p>
+                <h5 class="card-title"> The Best Side Dishes for Dinner</h5>
+                <p class="card-text"> numquam id perferendis delectus vero, perspiciatis odio modi saepe minus
+                  dignissimos nesciunt officiis. Delectus, itaque.</p>
+                <hr>
+                <p class="card-text">May 26,2017</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Ends dont miss section-->
+
+  <!-- start footer section -->
+  <div class="container-fluid align-self-center" style="margin-top: 13%;">
+    <div class="row text-center bg-dark   text-white" style="height: 40vw;">
+      <div class="col-xl-3 col-lg-3 col-md-12 col-12 text-white p-3 mt-5">
+        <h2 style="font-family: great vibes;">Our Address</h2>
+        <p>22 Alnahas Building, 2 AlBahr St, Tanta<br>
+          Al-Gharbia Governorate, Egypt</p>
+        <a href="https://www.bing.com/maps?osid=29767f2b-6569-4cfa-8cd2-a7e02b038136&cp=18.532652~73.694702&lvl=12&imgid=d1a7fe99-7d6a-49df-894c-ff85d8e0b9b1&v=2&sV=2&form=S00027"
+          target="_blank" class="text-warning">VIEW ON MAP</a>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-12 text-center p-5 d-block"
+        style="position: relative ; height: 40vw; margin-top: -7%; background-color: black;">
+        <p style="width: 7vw; height: 4vw ; content: ''; position: relative; left: 50%; transform: translate(-50%); margin-top: -13%; background-color: black; "
+          class="  rounded-circle"></p>
+        <h2 style="font-family: great vibes;">Make a Reservation</h2><br><br>
+        <table class="table">
+          <tr>
+            <td class="text-white">Week Days</td>
+            <td class="text-white">09:00-24:00</td>
+          </tr>
+          <tr>
+            <td class="text-white">Saturday</td>
+            <td class="text-white">08:00-03:00</td>
+          </tr>
+          <tr>
+            <td class="text-white">sunday</td>
+            <td class="text-white">Day off</td>
+          </tr>
+
+        </table>
+        <a href="#" class="text-warning pl-5 pr-5 pt-3 pb-3" style="border: 2px solid orange;">FIND A Table</a>
+        <p style="width: 7vw; height: 4vw ; content: ''; position: relative; left: 50%; transform: translate(-50%); margin-top: 29%; background-color: black; "
+          class="  rounded-circle">
+        </p>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-12 col-12 text-center mt-5">
+        <h2 style="font-family: great vibes;">Contact us</h2>
+        <p>Main Email: 7oroof@7oroof.com<br>
+          Phone: 02 01065370701</p>
+        <a href="#" class="text-warning">SEND A MESSAGE</a>
+      </div>
+      <p style="width: 100%; position: relative; text-align: center; left: 50%; transform: translate(-50%);">
+        <!-- Facebook -->
+        <a href="#" class="col-3">
+          <i class="fab fa-facebook  bg-primary rounded-circle text-white p-2 pl-2 pr-2" style="font-size: 2vw;"></i>
+        </a>
+
+        <!-- Twitter -->
+        <a href="#" class="col-3">
+          <i class="fab fa-twitter  bg-info rounded-circle text-white p-2 pl-2 pr-2" style="font-size: 2vw;"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="#" class="col-3">
+          <i class="fab fa-instagram  bg-warning rounded-circle text-white p-2 pl-2 pr-2" style="font-size: 2vw;"></i>
+        </a>
+
+        <!-- Youtube -->
+        <a href="#" class="col-3">
+          <i class="fab fa-pinterest-p  bg-danger rounded-circle text-white p-2 pl-2 pr-2" style="font-size: 2vw;"></i>
+        </a>
+        <label for="" style="margin-left: 15%;"><a href="#"></a>Subscribe Our Newsletter</label>
+      </p>
+    </div>
+    <p style="width: 7vw; height: 4vw ; content: ''; position: relative; left: 50%; transform: translate(-50%); margin-top: -2%; background-color: black; "
+      class="rounded-circle"></p>
+  </div>
+  <div class=" text-center text-white p-5" style="background-color: black; margin-top: -4%;">
+    <p>&copy; 2018 Granny</p>
+  </div>
+  <!-- ends footer section -->
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
